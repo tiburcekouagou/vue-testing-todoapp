@@ -1,14 +1,14 @@
 <template>
     <div>
-
+        <div v-for="todo in todos" :key="todo.id" data-test="todo">{{ todo.text }}</div>
     </div>
 </template>
 
 <script setup lang="ts">
 interface Todo {
-    id: number;
-    text: string;
-    completed: boolean;
+    id: number
+    text: string
+    completed: boolean
 }
 
 const todos: Todo[] = [
@@ -17,7 +17,7 @@ const todos: Todo[] = [
         text: 'Learn Vue.js 3',
         completed: true
     }
-];
+]
 
 console.log(todos)
 </script>
